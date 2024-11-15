@@ -9,3 +9,21 @@ header {
   font-size: 1.5rem;
   background-color: aqua;
 }
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+main {
+  padding-top: 3rem;
+
+  .languages {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .hide {
+    display: none;
+  }
+}
