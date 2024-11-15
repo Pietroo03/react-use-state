@@ -1,11 +1,12 @@
-import { useState } from 'react'
-import languages from './data/languages'
+import AppHeader from './components/AppHeader'
 import './App.css'
 
 function App() {
 
   return (
     <>
+
+      <AppHeader />
 
     </>
   )
