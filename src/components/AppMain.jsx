@@ -2,7 +2,7 @@ import { useState } from "react";
 import languages from "../data/languages";
 export default function AppMain() {
 
-    const [active, setActive] = useState(0)
+    const [active, setActive] = useState(null)
 
     function handleClick(e) {
         const newActive = e.target.getAttribute('data-index')
