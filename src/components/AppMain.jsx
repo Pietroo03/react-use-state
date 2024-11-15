@@ -31,7 +31,10 @@ export default function AppMain() {
                     <div className="descriptions">
                         {languages.map((item, index) => (
                             <div className="button-description">
-                                <div className={active == index ? 'active' : 'hide'}>{item.description}</div>
+                                <div className={active == index ? 'active' : 'hide'}>
+                                    <h3>{item.title}</h3>
+                                    <p>{item.description}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
