@@ -1,48 +1,36 @@
 import { useState } from "react";
 import languages from "../data/languages";
+import Button from "./Button/Button";
+import Description from "./Description/Description";
 export default function AppMain() {
 
     const [active, setActive] = useState(null)
 
-    function handleClick(e) {
-        const newActive = e.target.getAttribute('data-index')
-        console.log(newActive);
+    function handleClick(index) {
 
-        setActive(newActive)
+        setActive(index)
 
     }
 
     return (
 
-        <>
-            <main>
+        <main>
 
-                <div className="container">
-                    <div className="languages">
-                        {languages.map((item, index) => (
+            <div className="container">
 
-                            <div className="language-buttons" key={item.id}>
-                                <button onClick={handleClick} data-index={index} className="language">{item.title}</button>
-                            </div>
+                <Button
+                    languages={languages}
+                    active={active}
+                    onChange={handleClick}
+                />
+                <Description
+                    languages={languages}
+                    active={active}
+                />
 
-                        ))}
+            </div>
 
-                    </div>
-                    <div className="descriptions">
-                        {languages.map((item, index) => (
-                            <div className="button-description">
-                                <div className={active == index ? 'active' : 'hide'}>
-                                    <h3>{item.title}</h3>
-                                    <p>{item.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-            </main>
-
-        </>
+        </main>
 
     )
 
