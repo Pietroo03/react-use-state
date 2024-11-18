@@ -18,11 +18,11 @@ header {
 main {
   padding-top: 3rem;
 
-  .languages {
+  .languages-buttons {
     display: flex;
     justify-content: space-evenly;
 
-    .language {
+    .buttons {
       font-size: 1.5rem;
       background-color: rgb(61, 61, 255);
       color: white;
