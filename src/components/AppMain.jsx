@@ -1,6 +1,6 @@
 import { useState } from "react";
 import languages from "../data/languages";
-import Button from "./Button/Button";
+import Buttons from "./Button/Buttons";
 import Description from "./Description/Description";
 export default function AppMain() {
 
@@ -18,7 +18,7 @@ export default function AppMain() {
 
             <div className="container">
 
-                <Button
+                <Buttons
                     languages={languages}
                     active={active}
                     onChange={handleClick}

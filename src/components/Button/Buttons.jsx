@@ -1,4 +1,4 @@
-export default function Button({ languages, active, onChange }) {
+export default function Buttons({ languages, active, onChange }) {
 
     return (
         <div className="languages">
